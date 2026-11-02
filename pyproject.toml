@@ -1,0 +1,111 @@
+
+[project]
+name = "advanced-rag-engineering"
+version = "0.1.0"
+description = "Practical implementations of advanced Retrieval-Augmented Generation techniques"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+
+# Document ingestion and parsing
+ingestion = [
+    "docling",
+    "pymupdf",
+    "pdfplumber",
+    "python-docx",
+    "beautifulsoup4",
+    "pandas",
+    "openpyxl",
+]
+
+# OCR support
+ocr = [
+    "pytesseract",
+    "pillow",
+]
+
+# Advanced chunking
+chunking = [
+    "langchain-text-splitters",
+    "sentence-transformers",
+]
+
+# Embedding models
+embeddings = [
+    "sentence-transformers",
+    "transformers",
+    "torch",
+    "huggingface-hub",
+]
+
+# Vector databases
+chromadb = [
+    "chromadb",
+]
+
+qdrant = [
+    "qdrant-client",
+]
+
+faiss = [
+    "faiss-cpu",
+]
+
+pgvector = [
+    "psycopg[binary]",
+    "pgvector",
+    "sqlalchemy",
+]
+
+# Retrieval techniques
+retrieval = [
+    "rank-bm25",
+    "sentence-transformers",
+]
+
+# Query transformations
+query-transformations = [
+    "langchain",
+    "langchain-core",
+    "langchain-groq",
+]
+
+# Reranking
+reranking = [
+    "sentence-transformers",
+]
+
+# RAG evaluation
+evaluation = [
+    "ragas",
+    "deepeval",
+]
+
+# Production and API development
+production = [
+    "fastapi",
+    "uvicorn[standard]",
+    "redis",
+    "celery",
+]
+
+# Development tools
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "ruff",
+    "mypy",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["01_document_ingestion/tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.uv]
+package = false

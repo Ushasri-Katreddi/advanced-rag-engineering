@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+
+# Generated document outputs
+sample_documents/pdf/extracted.md
+
+# Local model/cache files
+.cache/
